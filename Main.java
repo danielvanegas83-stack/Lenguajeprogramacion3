@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int opc = 1;
-        while (opc != 0) {
+        int opc2 = 1;
+        while (opc2 != 0) {
 
             System.out.print(
                     "Ingrese la opcion del menu al que quieres ingresar: \n " +
@@ -17,9 +17,11 @@ public class Main {
                             "7. Funcion 4 Operiones De Dos Numeros \n " +
                             "8. clase Persona \n " +
                             "9. Clase Rectangulo \n " +
+                            "10. Clase Cuenta Bancaria \n " +
+                            "11. Clase Coche \n " +
                             "Seleccione la Opcion que desea consultar : ");
 
-            opc = scanner.nextInt();
+            int opc = scanner.nextInt();
             scanner.nextLine(); // Limpiar el buffer
 
             switch (opc) {
@@ -70,18 +72,34 @@ public class Main {
                     System.out.println("El perímetro del rectángulo es: " + rectangulo.Perimetro());
 
                     break;
+                case 10:
+                    CuentaBancaria.main(args);
+                    break;
+            case 11:
+                    Coche.main(args);
+
+                    break;
 
             }
 
-            if (opc < 0 || opc > 9) {
+            if (opc < 0 || opc > 10) {
                 System.out.println("Opcion no valida, intente de nuevo");
 
             }
             System.out.println("\nSi desea salir del programa ingrese 0 continuar con otra opcion ingrese 1");
-            opc = scanner.nextInt();
-            scanner.nextLine(); // Limpiar el buffer
+            opc2 = scanner.nextInt();
+            scanner.nextLine();  // Limpiar el buffer
+            /*try {
+                System.out.println("\nSi desea salir del programa ingrese 0, continuar con otra opcion ingrese 1");
+                
+                opc2 = scanner.nextInt();
+                scanner.nextLine(); // Limpiar el buffer
+            } catch (Exception e) {
+                System.out.println("Entrada inválida. Saliendo del programa.");
+                break;
+            }*/
         }
-        System.out.println("\n Salite del programa.");
+        System.out.println("\n Saliste del programa.");
         scanner.close();
     }
 
