@@ -1,3 +1,4 @@
+package taller1;
 public class Rectangulo {
 
     private double base;
