@@ -30,8 +30,9 @@ import java.util.Scanner;
     
                 switch (opc) {
                     case 1:
-                        
-                        mascota.pintarConejo();
+                        System.out.print("Ingrese el nombre PARA SALUDAR: ");
+                        String nombre = sc.nextLine();  
+                        mascota.pintarConejo(nombre);
                         break;
                     case 2:
                         mascota.baile();

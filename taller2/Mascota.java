@@ -4,9 +4,10 @@ public class Mascota {
     private String cara = "(='.'=)";
     private String patas = "(''|_/'')";
 
-    public void pintarConejo(){
+    public void pintarConejo(String nombre){
+
         System.out.println(this.orejas);
-        System.out.println(this.cara);
+        System.out.println(this.cara+"    Hola "+ nombre);
         System.out.println(this.patas);
     }
 
